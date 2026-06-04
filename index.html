@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>n photography — Coming Soon</title>
+  <meta name="description" content="n photography — Your story through our lens. Coming soon." />
+  <meta property="og:title" content="n photography — Coming Soon" />
+  <meta property="og:description" content="Your story through our lens." />
+  <meta property="og:image" content="/coming_soon.jpeg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;900&family=Lato:wght@300;400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="grain"></div>
+
+  <!-- Full poster image -->
+  <section class="poster-section" id="poster">
+    <div class="poster-wrapper">
+      <img
+        src="/coming_soon.jpeg"
+        alt="n photography — Your Story Through Our Lens — Coming Soon"
+        class="poster-img"
+      />
+      <div class="poster-glow"></div>
+    </div>
+  </section>
+
+  <!-- QR section -->
+  <section class="qr-section" id="qr-section">
+    <div class="qr-inner">
+      <div class="qr-label">
+        <span class="qr-eyebrow">Scan to follow our journey</span>
+        <h2 class="qr-heading">Stay in the frame.</h2>
+        <p class="qr-sub">Point your camera — be first to know when we go live.</p>
+      </div>
+
+      <div class="qr-card">
+        <div class="qr-card-inner">
+          <div class="qr-logo-row">
+            <svg class="qr-brand-icon" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="18" cy="18" r="17" stroke="#c8d96e" stroke-width="2"/>
+              <circle cx="18" cy="18" r="8" stroke="#c8d96e" stroke-width="2"/>
+              <circle cx="18" cy="18" r="3" fill="#c8d96e"/>
+              <line x1="18" y1="1" x2="18" y2="7" stroke="#c8d96e" stroke-width="2"/>
+              <line x1="18" y1="29" x2="18" y2="35" stroke="#c8d96e" stroke-width="2"/>
+              <line x1="1" y1="18" x2="7" y2="18" stroke="#c8d96e" stroke-width="2"/>
+              <line x1="29" y1="18" x2="35" y2="18" stroke="#c8d96e" stroke-width="2"/>
+            </svg>
+            <span class="qr-brand-name">n photography</span>
+          </div>
+          <div class="qr-code-wrap" id="qr-wrap">
+            <!-- QR rendered by JS -->
+          </div>
+          <p class="qr-url-label" id="qr-url-display">nphotography.vercel.app</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Download SVG button -->
+    <div class="download-row">
+      <button class="btn-download" id="btn-download-svg">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        Download QR as SVG
+      </button>
+    </div>
+  </section>
+
+  <!-- Social footer -->
+  <footer class="site-footer">
+    <div class="footer-socials">
+      <!-- Instagram -->
+      <a href="#" class="social-link" aria-label="Instagram">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+      </a>
+      <!-- LinkedIn -->
+      <a href="#" class="social-link" aria-label="LinkedIn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+      </a>
+      <!-- Facebook -->
+      <a href="#" class="social-link" aria-label="Facebook">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+      </a>
+      <!-- X / Twitter -->
+      <a href="#" class="social-link" aria-label="X / Twitter">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+      </a>
+    </div>
+    <p class="footer-copy">© 2025 n photography · All rights reserved</p>
+  </footer>
+
+  <!-- Hidden SVG export container -->
+  <div id="svg-export-container" style="display:none;"></div>
+
+  <script src="qr.min.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
