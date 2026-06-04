@@ -8,13 +8,20 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html, body {
       background: rgb(207, 224, 132);
+      height: 100%;
+      margin: 0;
       display: flex;
+      align-items: center;
       justify-content: center;
-      min-height: 100vh;
+      overflow: hidden; /* lock viewport to avoid scrolling */
     }
     .page {
       width: 100%;
       max-width: 520px;
+      height: 100vh; /* full viewport height to keep layout stable */
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
     .page img {
       width: 100%;

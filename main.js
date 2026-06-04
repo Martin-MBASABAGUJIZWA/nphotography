@@ -6,13 +6,10 @@
 (function () {
   "use strict";
 
-  /* ── 1. Determine the canonical URL ─────────────────────────
-     Use the real page URL so the QR always points here.
-     During local dev (file://) we fall back to a placeholder. */
-  const pageURL =
-    window.location.protocol !== "file:"
-      ? window.location.href.split("?")[0].split("#")[0]
-      : "https://nphotography.vercel.app";
+    /* ── 1. Canonical QR URL ───────────────────────────────────
+      Use a fixed, production URL so the printed QR always
+      points to the live site regardless of hosting context. */
+    const pageURL = "https://nphotography.vercel.app";
 
   /* Update the small label under the QR card */
   const urlLabel = document.getElementById("qr-url-display");
